@@ -3,7 +3,7 @@ import json
 from rest_framework import status, generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from api.models import CoderEntity, CoderEntitySerializer
+from api.models import CoderEntity, CoderEntitySerializer, HabilidadesEntity, HabilidadesEntitySerializer, CiudadEntity, CiudadEntitySerializer, FormadetrabajoEntity, FormadetrabajoEntitySerializer   
 
 #como hacer get, post, delete a codigo limpio python 
 # class ContactsView(APIView):
@@ -43,3 +43,26 @@ class CoderEntityCrearUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
     queryset = CoderEntity.objects.all()
     serializer_class = CoderEntitySerializer
         
+class HabilidadesEntityList(generics.ListCreateAPIView):
+    queryset = HabilidadesEntity.objects.all()
+    serializer_class = HabilidadesEntitySerializer 
+    
+class HabilidadesEntityCrearUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
+    queryset = HabilidadesEntity.objects.all()
+    serializer_class = HabilidadesEntitySerializer
+    
+class CiudadEntityList(generics.ListCreateAPIView):
+    queryset = CiudadEntity.objects.all()
+    serializer_class = CiudadEntitySerializer 
+    
+class CiudadEntityCrearUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CiudadEntity.objects.all()
+    serializer_class = CiudadEntitySerializer    
+    
+class FormadetrabajoList(generics.ListCreateAPIView):
+    queryset = FormadetrabajoEntity.objects.all()
+    serializer_class = FormadetrabajoEntitySerializer
+    
+class FormadetrabajoEntityCrearUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FormadetrabajoEntity.objects.all()
+    serializer_class = FormadetrabajoEntitySerializer 
