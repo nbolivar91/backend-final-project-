@@ -59,7 +59,7 @@ class CiudadEntityCrearUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
     queryset = CiudadEntity.objects.all()
     serializer_class = CiudadEntitySerializer    
     
-class FormadetrabajoList(generics.ListCreateAPIView):
+class FormadetrabajoEntityList(generics.ListCreateAPIView):
     queryset = FormadetrabajoEntity.objects.all()
     serializer_class = FormadetrabajoEntitySerializer
     
