@@ -10,4 +10,11 @@ from api import views
 urlpatterns = [
     path('coder/<int:pk>', views.CoderEntityCrearUpdateDelete.as_view(), name='id-coders'),
     path('coder/', views.CoderEntityList.as_view(), name='all-coders'),
+    path('habilidades/<int:fk>', views.HabilidadesEntityCrearUpdateDelete.as_view(), name='id-habilidades'),
+    path('habilidades/', views.HabilidadesEntityList.as_view(), name='all-habilidades,'),
+    path('formatrabajo/<int:fk>', views.FormadetrabajoEntityCrearUpdateDelete.as_view(), name='id-tipo'),
+    path('formatrabajo/', views.FormadetrabajoEntityList.as_view(), name='all-tipo,'),
+    path('ciudad/<int:fk>', views.CiudadEntityCrearUpdateDelete.as_view(), name='id-ciudad'),
+    path('ciudad/', views.CiudadEntityList.as_view(), name='all-ciudad,'),
+    
 ]
